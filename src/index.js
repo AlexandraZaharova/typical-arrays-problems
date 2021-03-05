@@ -18,5 +18,12 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    if (array == undefined || array.length == 0) {
+        return 0;
+    } else {
+        let sum = 0;
+        array.map(item => sum += item);
+        console.log(sum);
+        return sum / array.length;
+    }
 }
